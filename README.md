@@ -7,3 +7,5 @@ Jokes were taken from FIDO Network. It has method to register for start with Win
 but now it is disabled. When the window of the program is shown you can hide it by holding
 Alt-Ctrl and clicking two times right button of the mouse at the center of the scull.
 Or window will disappear in some time.
+
+Requirements : MASM32 package
