@@ -28,7 +28,7 @@ IsActive    Dd  TRUE
 
 .data?
 hDC         Dd  ?
-hWnd	    Dd  ?
+hWnd      Dd  ?
 hFNT        Dd  ?
 hTimer      Dd  ?
 hBitmap     Dd  ?
@@ -105,13 +105,13 @@ WndProc proc hWin   :DWORD,
      .elseif uMsg == WM_INITDIALOG
         invoke GetSystemMetrics, SM_CXSCREEN
         shr    eax, 1
-        sub    eax, 171 // Half of the width of our program window
+        sub    eax, 171 ; Half of the width of our program window
         mov    edx, eax
         push   edx
         invoke GetSystemMetrics, SM_CYSCREEN
         pop    edx
         shr    eax, 1
-        sub    eax, 52 // Half of the height of our program window
+        sub    eax, 52 ; Half of the height of our program window
         invoke SetWindowPos, hWin, HWND_TOPMOST, edx, eax, 342, 96, SWP_NOCOPYBITS
 
         invoke SendMessage, hWin, WM_SETTEXT, 0, ADDR dlgTitle
